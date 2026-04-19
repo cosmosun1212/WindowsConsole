@@ -3,13 +3,13 @@
 #include <conio.h>
 #include <time.h>
 #include <locale.h>
-#include "ScreenBuffer.h"
-#include "InputManager.h"
-#include "TimeManager.h"
-#include "CmdUtil.h"
-#include "GameUI.h"
-#include "Collision.h"
-#include "ButtonObject.h"
+#include "../cmdComm/ScreenBuffer.h"
+#include "../cmdComm/InputManager.h"
+#include "../cmdComm/TimeManager.h"
+#include "../cmdComm/CmdUtil.h"
+#include "../cmdComm/GameUI.h"
+#include "../cmdComm/Collision.h"
+#include "../cmdComm/cmdUI/ButtonObject.h"
 
 extern INPUTVALUE g_Input;
 extern TIMEMANAGER g_Time;

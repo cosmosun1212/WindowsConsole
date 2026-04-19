@@ -11,7 +11,7 @@
 #include "CmdUtil.h"
 #include "GameUI.h"
 #include "Collision.h"
-#include "ButtonObject.h"
+#include "./cmdUI/ButtonObject.h"
 
 extern INPUTVALUE g_Input;
 extern TIMEMANAGER g_Time;

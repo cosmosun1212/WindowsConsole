@@ -61,9 +61,26 @@ void ScreenPrint(int x, int y, const wchar_t* string)
 	DWORD dw;
 	COORD CursorPosition = { x, y };
 	int len = (DWORD)wcslen(string);
+    int vlen = 0;
+
+    for (int i = 0; i < len; i++)
+    {
+        // 한글 음절과 자모는 2칸으로 간주
+        //if ((string[i] >= 0xAC00 && string[i] <= 0xD7A3) || (string[i] >= 0x1100 && string[i] <= 0x11FF))
+        if (string[i] > 0x007F)
+        {
+            vlen += 2;
+        }
+        else // 나머지는 1칸으로 간주
+        {
+            vlen += 1;
+        }
+    }
+
 	SetConsoleCursorPosition(g_hScreen[g_nScreenIndex], CursorPosition);
 	WriteConsoleOutputCharacterW(g_hScreen[g_nScreenIndex], string, len, CursorPosition, &dw);
 	FillConsoleOutputAttribute(g_hScreen[g_nScreenIndex], g_wColor, len, CursorPosition, &dw);
+    FillConsoleOutputAttribute(g_hScreen[g_nScreenIndex], g_wColor, vlen, CursorPosition, &dw);
 }
 
 void SetColor(unsigned short color)
