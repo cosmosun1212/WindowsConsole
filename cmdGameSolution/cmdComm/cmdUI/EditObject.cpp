@@ -6,7 +6,7 @@ namespace cmdUI
 {
     EDIT* CreateEdit(int x, int y, int w, int maxLen, const wchar_t* label, bool encrypted, unsigned short colDef, unsigned short colHov, unsigned short colFoc)
     {
-        EDIT* edit = (UI_EDIT*)malloc(sizeof(EDIT));
+        EDIT* edit = (EDIT*)malloc(sizeof(EDIT));
         edit->x = x;
         edit->y = y;
         edit->width = w;
