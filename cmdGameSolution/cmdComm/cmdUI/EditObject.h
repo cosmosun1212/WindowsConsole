@@ -4,7 +4,7 @@
 #include <windows.h>
 #include "InputManager.h" 
 
-namespace cmdUI
+namespace CmdUI
 {
     typedef struct ___Edit {
         int x, y;                    // 위치
