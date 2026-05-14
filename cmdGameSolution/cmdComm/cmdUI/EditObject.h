@@ -27,7 +27,7 @@ namespace cmdUI
     } EDIT;
 
     EDIT* CreateEdit(int x, int y, int w, int maxLen, const wchar_t* label, bool encrypted, unsigned short colDef, unsigned short colHov, unsigned short colFoc);    
-    bool UpdateEdit(UI_EDIT* edit, const INPUTVALUE* input);
-    void DrawEdit(UI_EDIT* edit);
-    void ReleaseEdit(UI_EDIT* edit);
+    bool UpdateEdit(EDIT* edit, const INPUTVALUE* input);
+    void DrawEdit(EDIT* edit);
+    void ReleaseEdit(EDIT* edit);
 }
