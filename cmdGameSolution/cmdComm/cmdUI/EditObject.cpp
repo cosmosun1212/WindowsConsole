@@ -2,7 +2,7 @@
 #include "ScreenBuffer.h"
 #include <stdlib.h>
 
-namespace cmdUI
+namespace CmdUI
 {
     EDIT* CreateEdit(int x, int y, int w, int maxLen, const wchar_t* label, bool encrypted, unsigned short colDef, unsigned short colHov, unsigned short colFoc)
     {
