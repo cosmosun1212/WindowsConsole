@@ -13,6 +13,6 @@ namespace CmdUI
     } TEXT;
 
     TEXT* CreateText(int x, int y, const wchar_t* label, unsigned short color);
-    void DrawTextControl(UI_TEXT* txt);
-    void ReleaseText(UI_TEXT* txt);
+    void DrawTextControl(TEXT* txt);
+    void ReleaseText(TEXT* txt);
 }
