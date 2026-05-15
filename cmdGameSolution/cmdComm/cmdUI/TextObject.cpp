@@ -1,11 +1,11 @@
 #include "TextObject.h"
-#include <stdlib.h> // malloc, free »ç¿ë
+#include <stdlib.h> // malloc, free Â»Ã§Â¿Ã«
 
 namespace CmdUI
 {
-    UI_TEXT* CreateText(int x, int y, const wchar_t* label, unsigned short color)
+    TEXT* CreateText(int x, int y, const wchar_t* label, unsigned short color)
     {
-        UI_TEXT* txt = (UI_TEXT*)malloc(sizeof(UI_TEXT));
+        TEXT* txt = (UI_TEXT*)malloc(sizeof(TEXT));
         txt->x = x;
         txt->y = y;
         txt->color = color;
@@ -15,7 +15,7 @@ namespace CmdUI
         return txt;
     }
 
-    void DrawTextControl(UI_TEXT* txt)
+    void DrawTextControl(TEXT* txt)
     {
         if (txt == NULL) return;
 
@@ -23,7 +23,7 @@ namespace CmdUI
         ScreenPrint(txt->x, txt->y, txt->text);
     }
 
-    void ReleaseText(UI_TEXT* txt)
+    void ReleaseText(TEXT* txt)
     {
         if (txt == NULL) return;
         free(txt);
