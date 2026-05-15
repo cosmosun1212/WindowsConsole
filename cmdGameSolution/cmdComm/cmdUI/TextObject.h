@@ -6,7 +6,7 @@
 namespace CmdUI
 {
     // 텍스트 구조체 정의
-    typedef struct ___UIText {
+    typedef struct ___Text {
         int x, y;               // 위치
         unsigned short color;   // 색상
         wchar_t text[128];      // 출력할 문자열
