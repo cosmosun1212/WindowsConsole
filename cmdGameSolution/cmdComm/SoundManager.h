@@ -8,7 +8,7 @@ typedef struct ___SoundEngine {
     FMOD_SYSTEM* system;
     FMOD_SOUND* soundContainer[MAX_SOUND_CHANNELS]; // 사운드 파일들을 담을 배열
     bool         isLoaded[MAX_SOUND_CHANNELS];       // 해당 슬롯에 소리가 로드되었는지 여부
-    } 
+}SOUND_ENGINE;
 
 bool SoundInit();
 void SoundUpdate();
