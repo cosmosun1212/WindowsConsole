@@ -2,7 +2,7 @@
 #include "ScreenBuffer.h"
 #include <stdlib.h>
 
-namespace CmdUI
+namespace CmdGui
 {
     CHECKBOX* CreateCheckBox(int x, int y, const wchar_t* label, bool defaultCheck, unsigned short colDef, unsigned short colHov)
     {
@@ -19,15 +19,15 @@ namespace CmdUI
 
     bool UpdateCheckBox(CHECKBOX* chk, const INPUTVALUE* input)
     {
-        if (chk == NULL || input == NULL) return false;
+        if (chk == NULL) return false;
 
         int textLen = (int)wcslen(chk->label) * 2;
 
-        chk->isHovered = (
-            input->mouseX >= chk->x && 
-            input->mouseX < chk->x + 5 + textLen &&
+        // í˜¸ë²„ íŒì •
+        chk->isHovered = (input->mouseX >= chk->x && input->mouseX < chk->x + 5 + textLen &&
             input->mouseY == chk->y);
 
+        // ë‹¨ë°œì„± í´ë¦­ ê°ì§€
         if (chk->isHovered && input->isMouseLeftClick)
         {
             chk->isChecked = !(chk->isChecked);
@@ -43,11 +43,11 @@ namespace CmdUI
         unsigned short currentColor = chk->isHovered ? chk->colorHover : chk->colorDefault;
         SetColor(currentColor);
 
-        // Ã¼Å© »óÅÂ¿¡ µû¶ó ¹Ú½º Ãâ·Â
-        if (chk->isChecked) ScreenPrint(chk->x, chk->y, L"[¡á]");
+        // ì²´í¬ ìƒíƒœì— ë”°ë¼ ë°•ìŠ¤ ì¶œë ¥
+        if (chk->isChecked) ScreenPrint(chk->x, chk->y, L"[â– ]");
         else                ScreenPrint(chk->x, chk->y, L"[ ]");
 
-        // ÅØ½ºÆ® Ãâ·Â
+        // í…ìŠ¤íŠ¸ ì¶œë ¥
         ScreenPrint(chk->x + 4, chk->y, chk->label);
     }
 
