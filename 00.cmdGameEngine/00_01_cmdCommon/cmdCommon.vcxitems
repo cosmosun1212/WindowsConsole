@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{17e666f0-4e07-4d72-9e07-04471333ac12}</ItemsProjectGuid>
+    <ItemsProjectName>00_01_cmdCommon</ItemsProjectName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CmdColor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Collision.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)InputManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Numbers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ScreenBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)TimeManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Collision.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)InputManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Numbers.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ScreenBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)TimeManager.cpp" />
+  </ItemGroup>
+</Project>
