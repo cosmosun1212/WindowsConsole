@@ -1,0 +1,8 @@
+# 최상위 에디터 설정 선언
+root = true
+
+# 모든 C++ 소스 및 헤더 파일의 인코딩을 UTF-8(BOM 버전)로 강제 지정
+[*.{cpp,h,hpp,inl}]
+charset = utf-8-bom
+indent_style = space
+indent_size = 4
