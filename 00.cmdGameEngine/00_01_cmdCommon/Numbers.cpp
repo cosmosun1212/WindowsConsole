@@ -91,7 +91,7 @@ void DrawNumber(int x, int y, int num, const wchar_t* ch, unsigned short color)
 			}
 			else
 			{
-				ScreenPrint(x + ix, y + iy, L" ");
+				ScreenPrint(x + ix, y + iy, L"　");
 			}
 		}
 	}
