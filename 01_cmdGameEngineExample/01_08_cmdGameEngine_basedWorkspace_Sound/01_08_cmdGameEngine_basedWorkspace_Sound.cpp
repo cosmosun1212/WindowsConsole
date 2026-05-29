@@ -93,11 +93,11 @@ void Update()
     {
         SetButtonHover(btnStart, true); // 충돌 후 색 변경
         // 엔터키 누르면 클릭한 것과 똑같이 처리
-         isClickStart = true;
+        isClickStart = true;
     }
 
     if (isClickStart)
-    {                
+    {
         MessageBox(NULL, L"게임을 시작합니다!", L"알림", MB_OK);
     }
 
