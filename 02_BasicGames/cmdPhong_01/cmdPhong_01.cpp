@@ -266,7 +266,6 @@ int main(void)
 {
 	Awake(); // 게임 초기화
 	Start(); // 게임 시작 시 초기화
-	TimeInit(); // 시간 관리 시스템 초기화
 
 	// 게임 루프
 	while (bIsGameOver) // 게임 오버 상태가 아닐 때 계속 실행
