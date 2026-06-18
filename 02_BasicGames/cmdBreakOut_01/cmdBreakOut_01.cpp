@@ -90,7 +90,7 @@ void SetupLevel()
             else if (y == 1) blocks[index].color = YELLOW; // 노랑
             else if (y == 2) blocks[index].color = GREEN; // 초록
             else if (y == 3) blocks[index].color = CYAN; // 하늘
-            else blocks[index].color = 0x0009; // 파랑
+            else blocks[index].color = BLUE; // 파랑
 
             activeBlockCount++;
         }
