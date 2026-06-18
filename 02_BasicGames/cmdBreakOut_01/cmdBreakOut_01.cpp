@@ -318,8 +318,10 @@ void Render()
 
 void PostRender()
 {
+#ifdef _DEBUG
     FPS_Gizmo(25, 0, &g_Time, &g_Input); // 우측 상단에 배치
-    ScreenFlipping();
+#endif    
+    ScreenFlipping();    
 }
 
 void Release()
