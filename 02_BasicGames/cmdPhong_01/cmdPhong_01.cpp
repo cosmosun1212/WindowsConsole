@@ -248,8 +248,10 @@ void Render()
 // 화면 버퍼에 그린 내용을 실제 콘솔 창에 출력하는 함수
 void PostRender()
 {
+#ifdef _DEBUG
     // 기즈모는 어디서든 보이면 좋음
     FPS_Gizmo(25, 22, &g_Time, &g_Input);
+#endif	
 	ScreenFlipping(); // 화면 버퍼에 그린 내용을 실제 콘솔 창에 출력
 }
 
